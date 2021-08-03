@@ -24,6 +24,9 @@ if errorlevel 9009 (
 	echo.http://sphinx-doc.org/
 	exit /b 1
 )
+:html_r
+%SPHINXBUILD% -b html %SOURCEDIR% "docs" %SPHINXOPTS% %O%
+goto end
 
 %SPHINXBUILD% -M %1 %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
 goto end
